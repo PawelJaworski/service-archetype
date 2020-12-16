@@ -9,10 +9,15 @@ import ${groupId}.domain.RepositoryPoc;
 public final class ServiceConfig {
   @Builder.Default
   private final RepositoryPoc repositoryPoc = new RepositoryPocInMemoryAdapter();
-  public final ${classPrefix}QueryFacade queryFacade;
+  public final PokerPlanningQueryFacade queryFacade;
 
   @Builder
-  public ServiceConfig(RepositoryPoc repositoryPoc) {
-    this.queryFacade = new ${classPrefix}QueryFacadeImpl(repositoryPoc);
+  public static ServiceConfig newServiceConfig(RepositoryPoc repositoryPoc) {
+    return new ServiceConfig();
+  }
+
+  private ServiceConfig() {
+    this.queryFacade = new PokerPlanningQueryFacadeImpl(repositoryPoc);
   }
 }
+
