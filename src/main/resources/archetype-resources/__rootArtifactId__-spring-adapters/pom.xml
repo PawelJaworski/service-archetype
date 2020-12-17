@@ -105,8 +105,6 @@
 		<dependency> <!-- enables mocking of classes (in addition to interfaces) -->
 			<groupId>net.bytebuddy</groupId>
 			<artifactId>byte-buddy</artifactId>
-			<version>1.10.10</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency> <!-- enables mocking of classes without default constructor (together with ByteBuddy or CGLIB) -->
 			<groupId>org.objenesis</groupId>

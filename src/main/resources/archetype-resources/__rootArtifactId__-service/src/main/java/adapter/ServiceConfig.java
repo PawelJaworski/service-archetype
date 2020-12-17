@@ -2,22 +2,21 @@ package ${groupId}.adapter;
 
 import lombok.Builder;
 
-import ${groupId}.PokerPlanningQueryFacade;
-import ${groupId}.PokerPlanningQueryFacadeImpl;
+import ${groupId}.${classPrefix}QueryFacade;
+import ${groupId}.${classPrefix}QueryFacadeImpl;
+import ${groupId}.application.${classPrefix}CommandFacade;
+import ${groupId}.application.${classPrefix}CommandFacadeImpl;
 import ${groupId}.domain.RepositoryPoc;
 
 public final class ServiceConfig {
   @Builder.Default
   private final RepositoryPoc repositoryPoc = new RepositoryPocInMemoryAdapter();
-  public final PokerPlanningQueryFacade queryFacade;
+  public final ${classPrefix}QueryFacade queryFacade;
+  public final ${classPrefix}CommandFacade commandFacade;
 
   @Builder
-  public static ServiceConfig newServiceConfig(RepositoryPoc repositoryPoc) {
-    return new ServiceConfig();
-  }
-
-  private ServiceConfig() {
-    this.queryFacade = new PokerPlanningQueryFacadeImpl(repositoryPoc);
+  private ServiceConfig(RepositoryPoc repositoryPoc) {
+    this.queryFacade = new ${classPrefix}QueryFacadeImpl(repositoryPoc);
+    this.commandFacade = new ${classPrefix}CommandFacadeImpl(repositoryPoc);
   }
 }
-
