@@ -12,7 +12,7 @@
 <modules>
     <module>${rootArtifactId}-service</module>
     <module>${rootArtifactId}-spring-adapters</module>
-<!--    <module>${rootArtifactId}-micronaut-adapter</module>-->
+    <module>${rootArtifactId}-micronaut-adapters</module>
 </modules>
 
 </project>

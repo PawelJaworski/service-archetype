@@ -1,5 +1,5 @@
     mvn archetype:generate\
-      -DgroupId=pl.asc.edu.plannig\
+      -DgroupId=pl.asc.edu.planning\
       -DartifactId=poker-planning\
       -DarchetypeGroupId=pl.javorex\
       -DarchetypeArtifactId=service-archetype\

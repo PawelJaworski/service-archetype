@@ -62,38 +62,24 @@
         </fileSet>
       </fileSets>
     </module>
-
-<!--    <module id="${rootArtifactId}-spring-adapters" dir="__rootArtifactId__-spring-adapters" name="${rootArtifactId}-spring-adapters">-->
-<!--      <fileSets>-->
-<!--        <fileSet filtered="true" packaged="true" encoding="UTF-8">-->
-<!--          <directory>src/main/java</directory>-->
-<!--        </fileSet>-->
-<!--        <fileSet encoding="UTF-8">-->
-<!--          <directory>src/main/resources</directory>-->
-<!--        </fileSet>-->
-<!--        <fileSet filtered="true" packaged="true" encoding="UTF-8">-->
-<!--          <directory>src/test/groovy</directory>-->
-<!--        </fileSet>-->
-<!--        <fileSet encoding="UTF-8">-->
-<!--          <directory>src/test/resources</directory>-->
-<!--        </fileSet>-->
-<!--      </fileSets>-->
-<!--    </module>-->
-<!--    <module id="${rootArtifactId}-micronaut-adapters" dir="__rootArtifactId__-micronaut-adapters" name="${rootArtifactId}-micronaut-adapters">-->
-<!--      <fileSets>-->
-<!--        <fileSet filtered="true" packaged="true" encoding="UTF-8">-->
-<!--          <directory>src/main/java</directory>-->
-<!--        </fileSet>-->
-<!--        <fileSet encoding="UTF-8">-->
-<!--          <directory>src/main/resources</directory>-->
-<!--        </fileSet>-->
-<!--        <fileSet filtered="true" packaged="true" encoding="UTF-8">-->
-<!--          <directory>src/test/groovy</directory>-->
-<!--        </fileSet>-->
-<!--        <fileSet encoding="UTF-8">-->
-<!--          <directory>src/test/resources</directory>-->
-<!--        </fileSet>-->
-<!--      </fileSets>-->
-<!--    </module>-->
+    <module id="${rootArtifactId}-micronaut-adapters" dir="__rootArtifactId__-micronaut-adapters" name="${rootArtifactId}-micronaut-adapters">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/groovy</directory>
+          <includes>
+            <include>**/*.groovy</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/test/resources</directory>
+        </fileSet>
+      </fileSets>
+    </module>
   </modules>
 </archetype-descriptor>
