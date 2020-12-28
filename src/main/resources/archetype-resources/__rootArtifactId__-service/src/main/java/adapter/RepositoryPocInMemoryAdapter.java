@@ -6,7 +6,7 @@ import ${groupId}.domain.EntityPoc;
 import ${groupId}.domain.RepositoryPoc;
 
 public class RepositoryPocInMemoryAdapter implements RepositoryPoc {
-  private Optional<EntityPoc> entityPoc = Optional.empty();
+  private Optional<EntityPoc> entityPoc = Optional.of(new EntityPoc("Entity example"));
 
   @Override
   public void save(EntityPoc entityPoc) {
