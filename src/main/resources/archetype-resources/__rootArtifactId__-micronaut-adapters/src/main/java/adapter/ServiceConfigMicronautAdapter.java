@@ -2,8 +2,8 @@ package ${groupId}.adapter;
 
 import io.micronaut.context.annotation.Bean;
 import io.micronaut.context.annotation.Factory;
-import ${groupId}.${classPrefix}QueryFacade;
-import ${groupId}.application.${classPrefix}CommandFacade;
+import ${groupId}.application.query.${classPrefix}QueryFacade;
+import ${groupId}.application.command.${classPrefix}CommandFacade;
 
 import javax.inject.Singleton;
 

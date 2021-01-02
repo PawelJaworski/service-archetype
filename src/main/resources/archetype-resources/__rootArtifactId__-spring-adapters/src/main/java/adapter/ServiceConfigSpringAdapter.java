@@ -2,18 +2,18 @@ package ${groupId}.adapter;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import ${groupId}.${classPrefix}QueryFacade;
-import ${groupId}.adapter.jpa.PocRepositoryJpaAdapter;
-import ${groupId}.application.${classPrefix}CommandFacade;
+import ${groupId}.application.query.${classPrefix}QueryFacade;
+import ${groupId}.adapter.jpa.RepositoryExampleJpaAdapter;
+import ${groupId}.application.command.${classPrefix}CommandFacade;
 
 @Configuration
 public class ServiceConfigSpringAdapter {
   private final ServiceConfig serviceConfig;
 
-  public ServiceConfigSpringAdapter(PocRepositoryJpaAdapter pocRepositoryJpaAdapter) {
+  public ServiceConfigSpringAdapter(RepositoryExampleJpaAdapter RepositoryExampleJpaAdapter) {
     this.serviceConfig = ServiceConfig
       .builder()
-            .repositoryPoc(pocRepositoryJpaAdapter)
+            .RepositoryExample(RepositoryExampleJpaAdapter)
       .build();
   }
 

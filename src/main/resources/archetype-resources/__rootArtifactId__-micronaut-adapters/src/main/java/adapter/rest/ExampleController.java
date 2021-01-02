@@ -3,8 +3,8 @@ package ${groupId}.adapter.rest;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
-import ${groupId}.${classPrefix}QueryFacade;
-import ${groupId}.application.${classPrefix}CommandFacade;
+import ${groupId}.application.query.${classPrefix}QueryFacade;
+import ${groupId}.application.command.${classPrefix}CommandFacade;
 
 
 @Controller("/example")
@@ -20,6 +20,6 @@ public class ExampleController {
 
     @Get
     HttpResponse getExample() {
-        return HttpResponse.ok(queryFacade.getSingleResponsePoc());
+        return HttpResponse.ok(queryFacade.getSingleResponseExample());
     }
 }

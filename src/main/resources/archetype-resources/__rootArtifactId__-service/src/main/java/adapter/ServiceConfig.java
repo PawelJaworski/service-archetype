@@ -2,28 +2,28 @@ package ${groupId}.adapter;
 
 import lombok.Builder;
 
-import ${groupId}.${classPrefix}QueryFacade;
-import ${groupId}.${classPrefix}QueryFacadeImpl;
-import ${groupId}.application.${classPrefix}CommandFacade;
-import ${groupId}.application.${classPrefix}CommandFacadeImpl;
-import ${groupId}.domain.RepositoryPoc;
+import ${groupId}.application.query.${classPrefix}QueryFacade;
+import ${groupId}.application.query.${classPrefix}QueryFacadeImpl;
+import ${groupId}.application.command.${classPrefix}CommandFacade;
+import ${groupId}.application.command.${classPrefix}CommandFacadeImpl;
+import ${groupId}.domain.RepositoryExample;
 
 public final class ServiceConfig {
   @Builder.Default
-  private final RepositoryPoc repositoryPoc;
+  private final RepositoryExample RepositoryExample;
 
   public final ${classPrefix}QueryFacade queryFacade;
   public final ${classPrefix}CommandFacade commandFacade;
 
   @Builder
-  private ServiceConfig(RepositoryPoc repositoryPoc) {
-    this.repositoryPoc = newRepositoryPoc(repositoryPoc);
+  private ServiceConfig(RepositoryExample RepositoryExample) {
+    this.RepositoryExample = newRepositoryExample(RepositoryExample);
 
-    this.queryFacade = new ${classPrefix}QueryFacadeImpl(this.repositoryPoc);
-    this.commandFacade = new ${classPrefix}CommandFacadeImpl(this.repositoryPoc);
+    this.queryFacade = new ${classPrefix}QueryFacadeImpl(this.RepositoryExample);
+    this.commandFacade = new ${classPrefix}CommandFacadeImpl(this.RepositoryExample);
   }
 
-  private RepositoryPoc newRepositoryPoc(RepositoryPoc repositoryPoc) {
-    return repositoryPoc != null ? repositoryPoc : new RepositoryPocInMemoryAdapter();
+  private RepositoryExample newRepositoryExample(RepositoryExample RepositoryExample) {
+    return RepositoryExample != null ? RepositoryExample : new RepositoryExampleInMemoryAdapter();
   }
 }

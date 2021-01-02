@@ -2,7 +2,7 @@ package ${groupId}.adapter.jpa;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import ${groupId}.domain.EntityPoc;
+import ${groupId}.domain.EntityExample;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,17 +14,17 @@ import java.io.Serializable;
 @Table(name = "entity_poc")
 @NoArgsConstructor
 @AllArgsConstructor
-public class EntityPocJpaAdapter implements Serializable {
+public class EntityExampleJpaAdapter implements Serializable {
 
     @Id
     @Column
     private String value;
 
-    public static EntityPocJpaAdapter fromEntity(EntityPoc entityPoc) {
-        return new EntityPocJpaAdapter(entityPoc.getValue());
+    public static EntityExampleJpaAdapter fromEntity(EntityExample EntityExample) {
+        return new EntityExampleJpaAdapter(EntityExample.getValue());
     }
 
-    EntityPoc toEntity() {
-        return new EntityPoc(value);
+    EntityExample toEntity() {
+        return new EntityExample(value);
     }
 }

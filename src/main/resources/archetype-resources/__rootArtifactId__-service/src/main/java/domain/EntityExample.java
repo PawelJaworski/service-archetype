@@ -3,6 +3,6 @@ package ${groupId}.domain;
 import lombok.Data;
 
 @Data
-public class EntityPoc {
+public class EntityExample {
   private final String value;
 }
